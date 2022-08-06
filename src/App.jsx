@@ -1,8 +1,15 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
-  return <div className="App"></div>;
+  const [view, setView] = useState("Inicio");
+
+  return (
+    <div className="App">
+      <NavBar viewSys={{ view, setView }} />
+    </div>
+  );
 }
 
 export default App;
