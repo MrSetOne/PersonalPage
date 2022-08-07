@@ -3,6 +3,7 @@
     width: 100%;
     justify-content: flex-end;
     height: 5rem;
+    z-index: 10;
     ul {
         width: 50rem;
         height: 100%;
@@ -11,7 +12,9 @@
         justify-content: space-between;
         padding: 1rem 2rem;
         li {
+            z-index: 10;
             button {
+                z-index: 10;
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
