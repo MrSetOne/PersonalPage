@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.scss";
 import { motion } from "framer-motion";
 
-const NavBar = ({ viewSys }) => {
+const NavBar = () => {
+  const [decoStyle, setDecoStyle] = useState({
+    left: 13,
+    height: 35,
+    width: 60,
+  });
+
+  const setView = (position) => {
+    if (position === 1) {
+      console.log("entra!");
+      setDecoStyle({
+        left: 13,
+        height: 35,
+        width: 60,
+      });
+    }
+    if (position === 2) {
+      setDecoStyle({
+        left: 121,
+        height: 35,
+        width: 93,
+      });
+    }
+    if (position === 3) {
+      setDecoStyle({
+        left: 260,
+        height: 35,
+        width: 86,
+      });
+    }
+    if (position === 4) {
+      setDecoStyle({
+        left: 394,
+        height: 35,
+        width: 92,
+      });
+    }
+  };
+
   return (
     <nav className="NavBar">
       <ul>
@@ -11,49 +49,34 @@ const NavBar = ({ viewSys }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <button
-            style={{ fontWeight: viewSys.view === "Inicio" ? 700 : 400 }}
-            onClick={() => viewSys.setView("Inicio")}
-          >
-            Inicio
-          </button>
+          <button onClick={() => setView(1)}>Inicio</button>
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <button
-            style={{ fontWeight: viewSys.view === "Sobre mi" ? 700 : 400 }}
-            onClick={() => viewSys.setView("Sobre mi")}
-          >
-            Sobre mi
-          </button>
+          <button onClick={() => setView(2)}>Sobre mi</button>
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <button
-            style={{ fontWeight: viewSys.view === "Portfolio" ? 700 : 400 }}
-            onClick={() => viewSys.setView("Portfolio")}
-          >
-            Portfolio
-          </button>
+          <button onClick={() => setView(3)}>Portfolio</button>
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.75 }}
         >
-          <button
-            style={{ fontWeight: viewSys.view === "Contacto" ? 700 : 400 }}
-            onClick={() => viewSys.setView("Contacto")}
-          >
-            Contacto
-          </button>
+          <button onClick={() => setView(4)}>Contacto</button>
         </motion.li>
+        <motion.div
+          className="NavBar__Deco"
+          animate={decoStyle}
+          transition={{ duration: 0.3, type: "spring" }}
+        />
       </ul>
     </nav>
   );
