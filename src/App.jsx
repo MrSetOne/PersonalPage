@@ -6,7 +6,6 @@ import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
-  const [view, setView] = useState(1);
   const [scrolleable, setScrolleable] = useState(false);
 
   return (
