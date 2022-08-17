@@ -1,0 +1,40 @@
+.AboutMe {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    * {
+        color: white;
+    }
+    .AboutMe__Text {
+        width: min(70vw, 100rem);
+        z-index: 1;
+        h2 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+    }
+    img {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .AboutMe {
+        >img {
+            width: unset;
+            height: 30vh;
+        }
+    }
+}

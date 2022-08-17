@@ -14,7 +14,7 @@ const Home = ({ setScrolleable, scrolleable }) => {
 
   const init = () => {
     setScrolleable(true);
-    scroller.scrollTo("Paco", { smooth: true });
+    scroller.scrollTo("aboutMe", { smooth: true });
   };
 
   return (

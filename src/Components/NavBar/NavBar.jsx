@@ -11,7 +11,6 @@ const NavBar = () => {
 
   const setView = (position) => {
     if (position === 1) {
-      console.log("entra!");
       setDecoStyle({
         left: 13,
         height: 35,
