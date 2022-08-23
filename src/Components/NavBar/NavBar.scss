@@ -1,36 +1,30 @@
 .NavBar {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    height: 5rem;
-    z-index: 20;
     position: fixed;
-    top: 0;
-    right: 0;
-    background: linear-gradient(#00000088, #9198e500);
+    top: 2vh;
+    right: 2vh;
+    z-index: 10000;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .NavBarSwitch {
+        position: absolute;
+        top: -.3rem;
+        right: 1.1rem;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 5rem;
+        cursor: pointer;
+    }
     ul {
-        width: 50rem;
-        height: 100%;
+        padding: 3rem;
+        padding-top: 3.7rem;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-        position: relative;
-        li {
-            z-index: 20;
-            button {
-                z-index: 20;
-                border: none;
-                background-color: transparent;
-                cursor: pointer;
-                color: white;
-                font-size: 2rem;
-            }
-        }
-        .NavBar__Deco {
-            background-color: #240463;
-            position: absolute;
-            border-radius: .5rem;
-        }
+        flex-direction: column;
+        gap: 1rem;
     }
 }

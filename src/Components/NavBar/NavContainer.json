@@ -1,0 +1,7 @@
+[
+    { "name": "Inicio", "path": "/" },
+    { "name": "Sobre mi", "path": "/aboutme" },
+    { "name": "Portfolio", "path": "/portfolio" },
+    { "name": "Tecnologias", "path": "/knowledge" },
+    { "name": "Contacto", "path": "/contact" }
+]
