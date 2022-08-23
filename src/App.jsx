@@ -4,6 +4,7 @@ import "./App.css";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar/NavBar";
+import Porfolio from "./Components/Portfolio/Porfolio";
 
 function App() {
   const [scrolleable, setScrolleable] = useState(false);
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Home scrolleable={scrolleable} setScrolleable={setScrolleable} />
       <AboutMe />
+      <Porfolio />
     </div>
   );
 }
