@@ -1,4 +1,3 @@
-// import { useScroll } from "framer-motion";
 import { useState } from "react";
 import "./App.css";
 import AboutMe from "./Components/AboutMe/AboutMe";
@@ -7,14 +6,20 @@ import NavBar from "./Components/NavBar/NavBar";
 import Porfolio from "./Components/Portfolio/Porfolio";
 
 function App() {
-  const [scrolleable, setScrolleable] = useState(false);
+  const [view, setView] = useState(0);
 
   return (
-    <div className="App" style={{ height: scrolleable ? "auto" : "100vh" }}>
-      <NavBar />
-      <Home scrolleable={scrolleable} setScrolleable={setScrolleable} />
-      <AboutMe />
-      <Porfolio />
+    <div className="App">
+      <NavBar setView={setView} />
+      {view === 0 ? (
+        <Home />
+      ) : view === 1 ? (
+        <AboutMe />
+      ) : view === 2 ? (
+        <Porfolio />
+      ) : (
+        <Home />
+      )}
     </div>
   );
 }

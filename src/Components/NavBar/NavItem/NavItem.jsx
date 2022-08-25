@@ -2,7 +2,12 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavItem.scss";
 
-const NavItem = ({ data, i, visible, setVisible }) => {
+const NavItem = ({ data, i, visible, setVisible, setView }) => {
+  const travel = () => {
+    setVisible(false);
+    setView(i);
+  };
+
   return (
     <AnimatePresence>
       {visible && (
@@ -13,7 +18,7 @@ const NavItem = ({ data, i, visible, setVisible }) => {
           whileTap={{ scale: 0.9 }}
           exit={{ opacity: 0, x: 25, y: -10, transition: { duration: 0.2 } }}
           className="NavItem"
-          onClick={() => setVisible(false)}
+          onClick={() => travel()}
         >
           {data.name}
         </motion.li>

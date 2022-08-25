@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import navInfo from "./NavContainer.json";
 import NavItem from "./NavItem/NavItem";
 
-const NavBar = () => {
+const NavBar = ({ setView }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const variants = {
@@ -34,7 +34,13 @@ const NavBar = () => {
       </motion.button>
       <ul>
         {navInfo.map((item, i) => (
-          <NavItem data={item} i={i} visible={isOpen} setVisible={setIsOpen} />
+          <NavItem
+            setView={setView}
+            data={item}
+            i={i}
+            visible={isOpen}
+            setVisible={setIsOpen}
+          />
         ))}
       </ul>
     </motion.nav>
