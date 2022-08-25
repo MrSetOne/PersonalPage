@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <NavBar setView={setView} />
       {view === 0 ? (
-        <Home />
+        <Home status={view} />
       ) : view === 1 ? (
-        <AboutMe />
+        <AboutMe status={view} />
       ) : view === 2 ? (
         <Porfolio />
       ) : (

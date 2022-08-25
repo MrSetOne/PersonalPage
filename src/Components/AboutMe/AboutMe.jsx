@@ -1,13 +1,17 @@
 import React from "react";
-import Scroll from "react-scroll";
+import { motion } from "framer-motion";
 import "./AboutMe.scss";
 import aboutMeBG from "../../Assets/4.svg";
 
-const AboutMe = () => {
-  const Element = Scroll.Element;
+const AboutMe = ({ status }) => {
+  console.log(status);
 
   return (
-    <Element name="aboutMe" className="AboutMe">
+    <motion.section
+      className="AboutMe"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 1.3 } }}
+    >
       <div className="aboutMe__img">
         {/* AQUI IRÁ LA FOTO, USALO PARA MAQUETAR */}
       </div>
@@ -22,7 +26,7 @@ const AboutMe = () => {
         </p>
       </div>
       <img src={aboutMeBG} alt="aboutmeBG" />
-    </Element>
+    </motion.section>
   );
 };
 

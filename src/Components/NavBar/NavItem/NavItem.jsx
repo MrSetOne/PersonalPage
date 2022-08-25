@@ -13,7 +13,7 @@ const NavItem = ({ data, i, visible, setVisible, setView }) => {
       {visible && (
         <motion.li
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: i / 4 } }}
+          animate={{ opacity: 1, y: 0, transition: { delay: i / 6 } }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           exit={{ opacity: 0, x: 25, y: -10, transition: { duration: 0.2 } }}
