@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import navInfo from "./NavContainer.json";
 import NavItem from "./NavItem/NavItem";
 
-const NavBar = ({ setView }) => {
+const NavBar = ({ setView, setExiting }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [first, setFirst] = useState(true);
 
@@ -60,6 +60,7 @@ const NavBar = ({ setView }) => {
             i={i}
             visible={isOpen}
             setVisible={setIsOpen}
+            setExiting={setExiting}
           />
         ))}
       </ul>

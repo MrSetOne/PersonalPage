@@ -2,10 +2,14 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./NavItem.scss";
 
-const NavItem = ({ data, i, visible, setVisible, setView }) => {
+const NavItem = ({ data, i, visible, setVisible, setView, setExiting }) => {
   const travel = () => {
     setVisible(false);
-    setView(i);
+    setExiting(true);
+    setTimeout(() => {
+      setView(i);
+      setExiting(false);
+    }, 1300);
   };
 
   return (

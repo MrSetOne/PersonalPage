@@ -9,9 +9,11 @@ import astro from "../../Assets/astrokid.png";
 const Home = ({ status }) => {
   return (
     <AnimatePresence>
-      {status === 0 && (
+      {!status && (
         <motion.section
           className="Home"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.3 } }}
           exit={{ opacity: 0, transition: { delay: 1, duration: 0.3 } }}
         >
           <motion.div

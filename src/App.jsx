@@ -7,14 +7,15 @@ import Porfolio from "./Components/Portfolio/Porfolio";
 
 function App() {
   const [view, setView] = useState(0);
+  const [exiting, setExiting] = useState(false);
 
   return (
     <div className="App">
-      <NavBar setView={setView} />
+      <NavBar setView={setView} setExiting={setExiting} />
       {view === 0 ? (
-        <Home status={view} />
+        <Home status={exiting} />
       ) : view === 1 ? (
-        <AboutMe status={view} />
+        <AboutMe status={exiting} />
       ) : view === 2 ? (
         <Porfolio />
       ) : (

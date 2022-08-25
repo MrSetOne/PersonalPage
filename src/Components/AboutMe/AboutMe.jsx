@@ -10,7 +10,7 @@ const AboutMe = ({ status }) => {
     <motion.section
       className="AboutMe"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 1.3 } }}
+      animate={{ opacity: 1, transition: { duration: 0.3 } }}
     >
       <div className="aboutMe__img">
         {/* AQUI IRÁ LA FOTO, USALO PARA MAQUETAR */}
@@ -25,7 +25,16 @@ const AboutMe = ({ status }) => {
           quas dicta ipsam, dignissimos culpa neque sed vero debitis dolorem.
         </p>
       </div>
-      <img src={aboutMeBG} alt="aboutmeBG" />
+      <motion.img
+        src={aboutMeBG}
+        alt="aboutmeBG"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.7, delay: 0.2 },
+        }}
+      />
     </motion.section>
   );
 };
