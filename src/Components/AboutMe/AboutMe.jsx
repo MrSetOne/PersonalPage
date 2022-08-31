@@ -2,8 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./AboutMe.scss";
 import aboutMeBG from "../../Assets/4.svg";
+import ArrowsNav from "../ArrowsNav/ArrowsNav";
 
-const AboutMe = ({ status }) => {
+const AboutMe = ({ status, viewSys, setExiting }) => {
   console.log(status);
 
   return (
@@ -12,6 +13,12 @@ const AboutMe = ({ status }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.3 } }}
     >
+      <ArrowsNav
+        dir={"prev"}
+        sectionName={"Inicio"}
+        viewSys={viewSys}
+        setExiting={setExiting}
+      />
       <div className="aboutMe__img">
         {/* AQUI IRÁ LA FOTO, USALO PARA MAQUETAR */}
       </div>
@@ -34,6 +41,12 @@ const AboutMe = ({ status }) => {
           opacity: 1,
           transition: { duration: 0.7, delay: 0.2 },
         }}
+      />
+      <ArrowsNav
+        dir={"next"}
+        sectionName={"Portfolio"}
+        viewSys={viewSys}
+        setExiting={setExiting}
       />
     </motion.section>
   );

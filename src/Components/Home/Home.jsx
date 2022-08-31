@@ -17,7 +17,6 @@ const Home = ({ status, viewSys, setExiting }) => {
           animate={{ opacity: 1, transition: { duration: 0.3 } }}
           exit={{ opacity: 0, transition: { delay: 1, duration: 0.3 } }}
         >
-          <ArrowsNav dir={"next"} viewSys={viewSys} setExiting={setExiting} />
           <motion.div
             className="Home__info"
             initial={{ opacity: 0, x: -40 }}
@@ -93,6 +92,12 @@ const Home = ({ status, viewSys, setExiting }) => {
               x: -80,
               transition: { delay: 0.3, duration: 0.7 },
             }}
+          />
+          <ArrowsNav
+            dir={"next"}
+            viewSys={viewSys}
+            setExiting={setExiting}
+            sectionName={"Sobre mi"}
           />
         </motion.section>
       )}

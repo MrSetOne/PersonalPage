@@ -1,0 +1,36 @@
+.ArrowsNav {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    z-index: 100;
+    h2 {
+        color: white;
+        font-size: 3.2rem;
+        line-height: .7;
+    }
+    img {
+        height: 2.4rem;
+        width: 2.4rem;
+        fill: white;
+        color: white;
+        position: relative;
+    }
+}
+
+.ArrowsNav--next {
+    bottom: 2rem;
+    right: 2rem;
+    img {
+        transform: rotate(180deg);
+    }
+}
+
+.ArrowsNav--prev {
+    top: 2rem;
+    left: 2rem;
+    flex-direction: row-reverse;
+}

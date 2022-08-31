@@ -19,7 +19,11 @@ function App() {
           viewSys={{ view, setView }}
         />
       ) : view === 1 ? (
-        <AboutMe status={exiting} />
+        <AboutMe
+          status={exiting}
+          setExiting={setExiting}
+          viewSys={{ view, setView }}
+        />
       ) : view === 2 ? (
         <Porfolio />
       ) : (
