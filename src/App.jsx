@@ -13,7 +13,11 @@ function App() {
     <div className="App">
       <NavBar setView={setView} setExiting={setExiting} />
       {view === 0 ? (
-        <Home status={exiting} />
+        <Home
+          setExiting={setExiting}
+          status={exiting}
+          viewSys={{ view, setView }}
+        />
       ) : view === 1 ? (
         <AboutMe status={exiting} />
       ) : view === 2 ? (

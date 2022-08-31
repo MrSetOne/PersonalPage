@@ -5,8 +5,9 @@ import img1 from "../../Assets/1.svg";
 import img2 from "../../Assets/2.svg";
 import img3 from "../../Assets/3.svg";
 import astro from "../../Assets/astrokid.png";
+import ArrowsNav from "../ArrowsNav/ArrowsNav";
 
-const Home = ({ status }) => {
+const Home = ({ status, viewSys, setExiting }) => {
   return (
     <AnimatePresence>
       {!status && (
@@ -16,6 +17,7 @@ const Home = ({ status }) => {
           animate={{ opacity: 1, transition: { duration: 0.3 } }}
           exit={{ opacity: 0, transition: { delay: 1, duration: 0.3 } }}
         >
+          <ArrowsNav dir={"next"} viewSys={viewSys} setExiting={setExiting} />
           <motion.div
             className="Home__info"
             initial={{ opacity: 0, x: -40 }}
