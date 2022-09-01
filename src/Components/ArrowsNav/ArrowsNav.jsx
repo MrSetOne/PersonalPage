@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import "./ArrowsNav.scss";
 import arrowImg from "../../Assets/arrow.svg";
 
@@ -19,7 +19,19 @@ const ArrowsNav = ({ dir, viewSys, setExiting, sectionName }) => {
   };
 
   return (
-    <button
+    <motion.button
+      initial={{
+        opacity: 0,
+        y: dir === "next" ? -50 : 50,
+        x: dir === "next" ? -50 : 50,
+      }}
+      animate={{ opacity: 1, y: 0, x: 0, transition: { duration: 1 } }}
+      exit={{
+        opacity: 0,
+        y: dir === "next" ? 30 : -30,
+        x: dir === "next" ? 30 : -30,
+        transition: { duration: 0.8 },
+      }}
       className={
         dir === "next"
           ? "ArrowsNav ArrowsNav--next"
@@ -29,7 +41,7 @@ const ArrowsNav = ({ dir, viewSys, setExiting, sectionName }) => {
     >
       <h2>{sectionName}</h2>
       <img src={arrowImg} alt="arrow" />
-    </button>
+    </motion.button>
   );
 };
 
