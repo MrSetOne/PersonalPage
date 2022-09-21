@@ -1,27 +1,27 @@
 .AboutMe {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
     position: relative;
-    * {
-        color: white;
-    }
-    .AboutMe__Text {
-        width: min(70vw, 100rem);
+    .AboutMe__Container {
+        width: min(80vw, 80vh);
+        height: 85vh;
+        border-radius: 1rem;
+        backdrop-filter: blur(11px);
+        background-color: #1609515e;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 1;
-        h2 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.5rem;
-            line-height: 1.6;
+        border: 3px outset #ffffff47;
+        span {
+            font-size: clamp(1.8rem, 3vw, 4rem);
         }
     }
-    img {
+    >img {
         position: absolute;
         width: 100%;
         bottom: 0;

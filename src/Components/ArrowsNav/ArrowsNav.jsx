@@ -25,7 +25,8 @@ const ArrowsNav = ({ dir, viewSys, setExiting, sectionName }) => {
         y: dir === "next" ? -50 : 50,
         x: dir === "next" ? -50 : 50,
       }}
-      animate={{ opacity: 1, y: 0, x: 0, transition: { duration: 1 } }}
+      whileInView={{ opacity: 1, y: 0, x: 0, transition: { duration: 1 } }}
+      viewport={{ once: true }}
       exit={{
         opacity: 0,
         y: dir === "next" ? 30 : -30,
