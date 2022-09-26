@@ -1,3 +1,49 @@
 .Porfolio {
-    background-color: #0144D1;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: calc(2.4rem + 4rem) min(2rem, 10vw);
+    position: relative;
+    overflow: hidden;
+    .Porfolio__Items {
+        width: min(100%, 125rem);
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        z-index: 1;
+    }
+    .Porfolio__bg {
+        * {
+            position: absolute;
+            z-index: 0;
+        }
+         :nth-child(1) {
+            top: -20vw;
+            height: 87vw;
+            left: -26vw;
+            transform: rotate(180deg);
+        }
+         :nth-child(2) {
+            top: 20vw;
+            height: 87vw;
+            right: -26vw;
+        }
+         :nth-child(3) {
+            top: calc(50vw + 74vw);
+            height: 87vw;
+            right: -26vw;
+        }
+         :nth-child(4) {
+            top: calc(220vw);
+            height: 130vw;
+            right: -20vw;
+            transform: rotate(200deg);
+        }
+         :nth-child(5) {
+            top: calc(350vw);
+            height: 169vw;
+            right: -20vw;
+            transform: rotate(60deg);
+        }
+    }
 }

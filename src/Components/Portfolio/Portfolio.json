@@ -1,21 +1,45 @@
 [{
-    "name": "titulo",
-    "subtitle": "una vaina loca",
-    "description": "Lorem fistrum papaar papaar benemeritaar pupita torpedo se calle ustée. Fistro sexuarl va usté muy cargadoo mamaar te voy a borrar el cerito está la cosa muy malar. Fistro ahorarr tiene musho peligro te voy a borrar el cerito al ataquerl condemor ese que llega. Tiene musho peligro quietooor hasta luego Lucas quietooor hasta luego Lucas torpedo apetecan de la pradera te va a hasé pupitaa. ",
-    "img": "http://2.bp.blogspot.com/-Ft40nmgMAoY/U7PLDuQd1zI/AAAAAAAA8gw/psV4mzLRZl0/s1600/chiquito-ipsum.jpg"
+    "name": "Visit-VLC",
+    "subtitle": "Aplicación de rutas turisticas",
+    "type": "FullStack",
+    "description": "Reto de tripulaciones (Trabajo final) del BootCamp de FullStack en The Bridge, se trata de un proyecto FullStack, una herramienta de rutas urbanas del área metropolitana de Valencia.",
+    "technologies": ["React", "Redux", "NodeJS", "Express", "MongoDB", "Sass"],
+    "links": {
+        "page": "https://visit-vlc.vercel.app/",
+        "github": "https://github.com/MrSetOne/VisitVLC-FrontEnd"
+    },
+    "img": ""
 }, {
-    "name": "titulo",
-    "subtitle": "una vaina loca",
-    "description": "Lorem fistrum papaar papaar benemeritaar pupita torpedo se calle ustée. Fistro sexuarl va usté muy cargadoo mamaar te voy a borrar el cerito está la cosa muy malar. Fistro ahorarr tiene musho peligro te voy a borrar el cerito al ataquerl condemor ese que llega. Tiene musho peligro quietooor hasta luego Lucas quietooor hasta luego Lucas torpedo apetecan de la pradera te va a hasé pupitaa. ",
-    "img": "http://2.bp.blogspot.com/-Ft40nmgMAoY/U7PLDuQd1zI/AAAAAAAA8gw/psV4mzLRZl0/s1600/chiquito-ipsum.jpg"
+    "name": "Cantastik",
+    "subtitle": "Red social hibrida",
+    "type": "FullStack",
+    "description": "La idea desde el principio fue hacer una red social hibrida entre Instagram y Twitter, podrias subir fotos con o sin imagen como en Twitter pero con la estetica minimalista y user",
+    "technologies": ["React", "Redux", "NodeJS", "Express", "MongoDB", "Sass"],
+    "links": {
+        "page": "https://cantastik.vercel.app/",
+        "github": "https://github.com/MrSetOne/cantastik-frontend"
+    },
+    "img": ""
 }, {
-    "name": "titulo",
-    "subtitle": "una vaina loca",
-    "description": "Lorem fistrum papaar papaar benemeritaar pupita torpedo se calle ustée. Fistro sexuarl va usté muy cargadoo mamaar te voy a borrar el cerito está la cosa muy malar. Fistro ahorarr tiene musho peligro te voy a borrar el cerito al ataquerl condemor ese que llega. Tiene musho peligro quietooor hasta luego Lucas quietooor hasta luego Lucas torpedo apetecan de la pradera te va a hasé pupitaa. ",
-    "img": "http://2.bp.blogspot.com/-Ft40nmgMAoY/U7PLDuQd1zI/AAAAAAAA8gw/psV4mzLRZl0/s1600/chiquito-ipsum.jpg"
+    "name": "Game-Quiz",
+    "subtitle": "Minijuego tipo Quiz",
+    "type": "FrontEnd",
+    "description": "consistia en genera un Quiz basandonos en JavaScript Vanilla, a excepcion de la libreria CharJs.Para esta pagina teniamos la idea de realizarla con formato SPA y sin scroll, de esta forma da la sensacion mas de juego y menos de pagina web.",
+    "technologies": ["HTML", "CSS", "JavaScript", "CharJS"],
+    "links": {
+        "page": "https://mrsetone.github.io/Quiz/",
+        "github": "https://github.com/MrSetOne/Quiz"
+    },
+    "img": ""
 }, {
-    "name": "titulo",
-    "subtitle": "una vaina loca",
-    "description": "Lorem fistrum papaar papaar benemeritaar pupita torpedo se calle ustée. Fistro sexuarl va usté muy cargadoo mamaar te voy a borrar el cerito está la cosa muy malar. Fistro ahorarr tiene musho peligro te voy a borrar el cerito al ataquerl condemor ese que llega. Tiene musho peligro quietooor hasta luego Lucas quietooor hasta luego Lucas torpedo apetecan de la pradera te va a hasé pupitaa. ",
-    "img": "http://2.bp.blogspot.com/-Ft40nmgMAoY/U7PLDuQd1zI/AAAAAAAA8gw/psV4mzLRZl0/s1600/chiquito-ipsum.jpg"
+    "name": "SurvivorShop",
+    "type": "FullStack",
+    "subtitle": "e-commerce postapocalíptico",
+    "description": "La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intentarlo... Algunos productos están puestos de forma cómica, como por",
+    "technologies": ["React", "Redux", "NodeJS", "Express", "MySQL", "Sass"],
+    "links": {
+        "page": null,
+        "github": "https://github.com/MrSetOne/SurvivorShop"
+    },
+    "img": ""
 }]
