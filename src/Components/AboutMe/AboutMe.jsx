@@ -40,6 +40,11 @@ const AboutMe = ({ status, viewSys, setExiting }) => {
               opacity: 1,
               transition: { duration: 0.7, delay: 0.5 },
             }}
+            exit={{
+              y: 50,
+              opacity: 0,
+              transition: { duration: 0.7, delay: 0.5 },
+            }}
           />
           <ArrowsNav
             dir={"next"}
