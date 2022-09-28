@@ -4,6 +4,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar/NavBar";
 import Porfolio from "./Components/Portfolio/Porfolio";
+import Technologies from "./Components/Technologies/Technologies";
 
 function App() {
   const [view, setView] = useState(0);
@@ -26,6 +27,12 @@ function App() {
         />
       ) : view === 2 ? (
         <Porfolio
+          setExiting={setExiting}
+          status={exiting}
+          viewSys={{ view, setView }}
+        />
+      ) : view === 3 ? (
+        <Technologies
           setExiting={setExiting}
           status={exiting}
           viewSys={{ view, setView }}
