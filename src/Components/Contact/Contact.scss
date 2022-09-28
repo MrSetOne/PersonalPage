@@ -1,0 +1,118 @@
+.Contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    .Contact__Card {
+        overflow: hidden;
+        backdrop-filter: blur(11px);
+        background-color: #1609515e;
+        border: 3px outset #ffffff47;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        width: min(100%, 90rem);
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            h2 {
+                width: min-content;
+                font-size: 5rem;
+                border: 2px solid white;
+                padding: 1rem;
+                text-transform: uppercase;
+            }
+            p {
+                width: min(60rem, 100%);
+                font-size: 1.6rem;
+                text-align: justify;
+            }
+        }
+        form {
+            width: min(50rem, 100%);
+            font-size: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            input,
+            textarea {
+                border: none;
+                outline: none;
+                background-color: #00000045;
+                font-size: 1.6rem;
+                color: white;
+                padding: 1rem;
+                resize: vertical;
+            }
+             ::placeholder {
+                border: none;
+                outline: none;
+                font-size: 1.6rem;
+                color: rgba(255, 255, 255, 0.438);
+                font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            }
+            div {
+                margin-top: .4rem;
+                display: flex;
+                justify-content: flex-end;
+                gap: 2rem;
+                button,
+                a {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    padding: 1rem;
+                    border: 2px solid white;
+                    font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+        .Contact__More {
+            width: min(60rem, 100%);
+            header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                div {
+                    height: .2rem;
+                    background-color: white;
+                    flex: 1;
+                }
+                h3 {
+                    font-weight: 200;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        ul {
+            width: min(60rem, 100%);
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    border-radius: .5rem;
+                    background-color: #00A982;
+                    font-size: 2.5rem;
+                    width: 100%;
+                    padding: 1rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    width: 100%;
+                    color: white;
+                }
+            }
+        }
+    }
+}

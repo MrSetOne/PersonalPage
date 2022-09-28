@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AboutMe from "./Components/AboutMe/AboutMe";
+import Contact from "./Components/Contact/Contact";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar/NavBar";
 import Porfolio from "./Components/Portfolio/Porfolio";
@@ -38,7 +39,11 @@ function App() {
           viewSys={{ view, setView }}
         />
       ) : (
-        <Home />
+        <Contact
+          setExiting={setExiting}
+          status={exiting}
+          viewSys={{ view, setView }}
+        />
       )}
     </div>
   );

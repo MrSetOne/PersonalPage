@@ -98,12 +98,14 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
+            align-items: center;
             border-radius: 1rem;
             backdrop-filter: unset;
             background-color: transparent;
             border: transparent;
             gap: 2rem;
             .Technologies__Stack {
+                width: min(100%, 35rem);
                 border-right: none;
                 gap: 1rem;
                 backdrop-filter: blur(11px);
