@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import "./ArrowsNav.scss";
 import arrowImg from "../../Assets/arrow.svg";
+import { animateScroll } from "react-scroll";
 
 const ArrowsNav = ({ dir, viewSys, setExiting, sectionName }) => {
   const navigate = (dir) => {
+    animateScroll.scrollToTop({ duration: 1300 });
     setExiting(true);
     if (dir === "next") {
       setTimeout(() => {

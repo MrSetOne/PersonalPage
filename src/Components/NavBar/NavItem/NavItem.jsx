@@ -1,9 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { animateScroll } from "react-scroll";
 import "./NavItem.scss";
 
 const NavItem = ({ data, i, visible, setVisible, setView, setExiting }) => {
   const travel = () => {
+    animateScroll.scrollToTop({ duration: 1300 });
     setVisible(false);
     setExiting(true);
     setTimeout(() => {
