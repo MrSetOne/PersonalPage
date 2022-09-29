@@ -3,8 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    position: relative;
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
     .Contact__Card {
+        z-index: 1;
         overflow: hidden;
         backdrop-filter: blur(11px);
         background-color: #1609515e;
