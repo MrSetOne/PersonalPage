@@ -7,6 +7,7 @@ import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import bg from "../../Assets/4.svg";
+import ArrowNav from "../ArrowsNav/ArrowsNav";
 
 const serviceID = process.env.REACT_APP_SERVICE_ID;
 const templateID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
@@ -30,15 +31,21 @@ const Contact = ({ status, viewSys, setExiting }) => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    // await sendForm(serviceID, templateID, e.target, publicKey).then((res) =>
-    //   console.log(res)
-    // );
+    await sendForm(serviceID, templateID, e.target, publicKey).then((res) =>
+      console.log(res)
+    );
   };
 
   return (
     <AnimatePresence>
       {!status && (
         <section className="Contact">
+          <ArrowNav
+            dir={"prev"}
+            sectionName={"Tecnologia"}
+            viewSys={viewSys}
+            setExiting={setExiting}
+          />
           <motion.div
             className="Contact__Card"
             initial={{ opacity: 0, scale: 0 }}
@@ -100,12 +107,26 @@ const Contact = ({ status, viewSys, setExiting }) => {
                 onChange={handleInputChange}
               ></textarea>
               <div>
-                <a href={cv} download="CV_Michael_Lara">
+                <motion.a
+                  initial={{ backgroundColor: "#ffffff00", color: "#ffffff" }}
+                  whileHover={{ backgroundColor: "#ffffff", color: "#0c0024" }}
+                  href={cv}
+                  download="CV_Michael_Lara"
+                >
                   Descargar CV
-                </a>
-                <button type="submit" disabled={!submiteable}>
+                </motion.a>
+                <motion.button
+                  initial={{
+                    border: "2px solid #00A982",
+                    color: "#00A982",
+                    backgroundColor: "#00a98200",
+                  }}
+                  whileHover={{ backgroundColor: "#00A982", color: "#ffffff" }}
+                  type="submit"
+                  disabled={!submiteable}
+                >
                   Enviar
-                </button>
+                </motion.button>
               </div>
             </motion.form>
             <div className="Contact__More">
@@ -117,9 +138,9 @@ const Contact = ({ status, viewSys, setExiting }) => {
                   transition: { delay: 1.5, duration: 0.3 },
                 }}
               >
-                <div></div>
+                <div />
                 <h3>Tambien puedes contarcarme en</h3>
-                <div></div>
+                <div />
               </motion.header>
             </div>
             <ul>
@@ -131,6 +152,8 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.7, duration: 0.3 },
                   }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="mailto: lara.sanchez.michael@gmail.com"
@@ -147,6 +170,8 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.8, duration: 0.3 },
                   }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="https://www.linkedin.com/in/michaellaras/"
@@ -163,6 +188,8 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.9, duration: 0.3 },
                   }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="https://github.com/MrSetOne"
