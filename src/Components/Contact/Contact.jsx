@@ -5,7 +5,7 @@ import "./Contact.scss";
 import validator from "validator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import bg from "../../Assets/4.svg";
 import ArrowNav from "../ArrowsNav/ArrowsNav";
@@ -16,6 +16,7 @@ const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 const Contact = ({ status, viewSys, setExiting }) => {
   const [submiteable, setSubmiteable] = useState(false);
+  const [submited, setSubmited] = useState(false);
   const [data, setData] = useState({ name: "", email: "", message: "" });
 
   const handleInputChange = ({ target }) => {
@@ -39,9 +40,8 @@ const Contact = ({ status, viewSys, setExiting }) => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    await sendForm(serviceID, templateID, e.target, publicKey).then((res) =>
-      console.log(res)
-    );
+    setSubmited(true);
+    // await sendForm(serviceID, templateID, e.target, publicKey);
   };
 
   return (
@@ -114,7 +114,41 @@ const Contact = ({ status, viewSys, setExiting }) => {
                 placeholder="Tu mensaje"
                 onChange={handleInputChange}
               ></textarea>
-              <div>
+              {submited && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="Contact__Sended"
+                >
+                  <motion.div
+                    initial={{ scale: 0.1, opacity: 0 }}
+                    animate={{
+                      scale: 1,
+                      opacity: 1,
+                      transition: { delay: 0.4 },
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </motion.div>
+                  <motion.div
+                    className="Contact__Sended--Deco"
+                    initial={{ width: 0 }}
+                    animate={{ width: "8rem", transition: { delay: 0.1 } }}
+                  />
+                  <motion.div
+                    className="Contact__Sended--Text"
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: { delay: 0.6, duration: 0.7 },
+                    }}
+                  >
+                    <h3>¡Mensaje mandado con exito!</h3>
+                    <p>Te contestaré con la mayor brevedad posible :)</p>
+                  </motion.div>
+                </motion.div>
+              )}
+              <motion.div animate={{ gap: submited && 0 }}>
                 <motion.a
                   initial={{ backgroundColor: "#ffffff00", color: "#ffffff" }}
                   whileHover={{ backgroundColor: "#ffffff", color: "#0c0024" }}
@@ -131,10 +165,14 @@ const Contact = ({ status, viewSys, setExiting }) => {
                   }}
                   animate={{
                     opacity: submiteable ? 1 : 0.5,
-                    cursor: !submiteable ? "not-allowed" : "pointer",
+                    cursor: submiteable ? "pointer" : "not-allowed",
+                    width: submited && 0,
+                    padding: submited && 0,
+                    border: submited && "none",
                   }}
                   whileHover={
-                    submiteable && {
+                    submiteable &&
+                    !submited && {
                       backgroundColor: "#00A982",
                       color: "#ffffff",
                     }
@@ -144,7 +182,7 @@ const Contact = ({ status, viewSys, setExiting }) => {
                 >
                   Enviar
                 </motion.button>
-              </div>
+              </motion.div>
             </motion.form>
             <div className="Contact__More">
               <motion.header
