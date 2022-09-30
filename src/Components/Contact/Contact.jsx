@@ -47,44 +47,36 @@ const Contact = ({ status, viewSys, setExiting }) => {
               opacity: 1,
               transition: { duration: 0.6, delay: 0.3 },
             }}
-            exit={{ opacity: 0, y: 50 }}
+            exit={{
+              y: 100,
+              opacity: 0,
+              transition: { duration: 0.6, delay: 0.3 },
+            }}
           >
-            <header>
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                  transition: { delay: 0.9, duration: 0.3 },
-                }}
-                exit={{ opacity: 0, y: 50 }}
-              >
-                ¡Hablemos!
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 50 }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                  transition: { delay: 1.1, duration: 0.3 },
-                }}
-                exit={{ opacity: 0, y: 50 }}
-              >
+            <motion.header
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { delay: 0.9, duration: 0.3 },
+              }}
+            >
+              <h2>¡Hablemos!</h2>
+              <p>
                 Actualmente estoy en busqueda activa de mi primera oportunidad
                 como desarrollador frontEnd o FullStack. Si buscas a alguien con
                 mi perfil no dudes en contactarme a través de este formulario.
                 !Estaré encantado de escuchar tu oferta!
-              </motion.p>
-            </header>
+              </p>
+            </motion.header>
             <motion.form
               onSubmit={(e) => sendMail(e)}
               initial={{ opacity: 0, y: 50 }}
               animate={{
                 y: 0,
                 opacity: 1,
-                transition: { delay: 1.3, duration: 0.3 },
+                transition: { delay: 0.9, duration: 0.3 },
               }}
-              exit={{ opacity: 0, y: 50 }}
             >
               <input
                 type="text"
@@ -124,7 +116,6 @@ const Contact = ({ status, viewSys, setExiting }) => {
                   opacity: 1,
                   transition: { delay: 1.5, duration: 0.3 },
                 }}
-                exit={{ opacity: 0, y: 50 }}
               >
                 <div></div>
                 <h3>Tambien puedes contarcarme en</h3>
@@ -140,7 +131,6 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.7, duration: 0.3 },
                   }}
-                  exit={{ opacity: 0, y: 50 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="mailto: lara.sanchez.michael@gmail.com"
@@ -157,7 +147,6 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.8, duration: 0.3 },
                   }}
-                  exit={{ opacity: 0, y: 50 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="https://www.linkedin.com/in/michaellaras/"
@@ -174,7 +163,6 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     opacity: 1,
                     transition: { delay: 1.9, duration: 0.3 },
                   }}
-                  exit={{ opacity: 0, y: 50 }}
                   target={"_blank"}
                   rel="noreferrer"
                   href="https://github.com/MrSetOne"
@@ -190,6 +178,11 @@ const Contact = ({ status, viewSys, setExiting }) => {
             animate={{
               y: 0,
               opacity: 1,
+              transition: { duration: 0.7 },
+            }}
+            exit={{
+              y: -50,
+              opacity: 0,
               transition: { duration: 0.7 },
             }}
             src={bg}
