@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import cv from "../../Assets/CV_Michael_Lara.pdf";
 import { sendForm } from "@emailjs/browser";
 import "./Contact.scss";
+import validator from "validator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -22,12 +23,19 @@ const Contact = ({ status, viewSys, setExiting }) => {
       ...data,
       [target.name]: target.value,
     });
-    if (data.email && data.message && data.name) {
+    if (
+      data.email &&
+      data.message &&
+      data.name &&
+      validator.isEmail(data.email)
+    ) {
       setSubmiteable(true);
     } else {
       setSubmiteable(false);
     }
   };
+
+  console.log();
 
   const sendMail = async (e) => {
     e.preventDefault();
@@ -52,7 +60,7 @@ const Contact = ({ status, viewSys, setExiting }) => {
             animate={{
               scale: 1,
               opacity: 1,
-              transition: { duration: 0.6, delay: 0.3 },
+              transition: { duration: 0.6, delay: 0.6 },
             }}
             exit={{
               y: 100,
@@ -121,7 +129,16 @@ const Contact = ({ status, viewSys, setExiting }) => {
                     color: "#00A982",
                     backgroundColor: "#00a98200",
                   }}
-                  whileHover={{ backgroundColor: "#00A982", color: "#ffffff" }}
+                  animate={{
+                    opacity: submiteable ? 1 : 0.5,
+                    cursor: !submiteable ? "not-allowed" : "pointer",
+                  }}
+                  whileHover={
+                    submiteable && {
+                      backgroundColor: "#00A982",
+                      color: "#ffffff",
+                    }
+                  }
                   type="submit"
                   disabled={!submiteable}
                 >

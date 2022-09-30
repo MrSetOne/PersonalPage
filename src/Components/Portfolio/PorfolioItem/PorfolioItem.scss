@@ -41,14 +41,24 @@
             display: flex;
             gap: 5rem;
             button {
-                border-radius: .5rem;
                 border: none;
                 outline: none;
+                border: 2px solid white;
                 padding: 1rem;
+                background-color: transparent;
                 a {
                     font-size: min(2rem, 1.7vw);
+                    color: white;
                     display: flex;
                     gap: .5rem;
+                }
+            }
+            button:hover {
+                background-color: white;
+                transition: .4s;
+                a {
+                    color: #0c0024;
+                    transition: .4s;
                 }
             }
         }
@@ -88,6 +98,7 @@
                 font-size: 3vw;
             }
             .PorfolioItem__Links {
+                gap: 2rem;
                 button {
                     padding: 1rem;
                     a {
