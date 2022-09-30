@@ -131,14 +131,14 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 570px) {
     .Contact {
         .Contact__Card {
             ul {
                 flex-direction: column;
                 gap: 1rem;
+                align-items: center;
                 li {
-                    width: 17rem;
                     width: 100%;
                     a {
                         justify-content: center;

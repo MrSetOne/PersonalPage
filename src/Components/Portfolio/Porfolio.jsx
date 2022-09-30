@@ -6,8 +6,17 @@ import bg2 from "../../Assets/2.svg";
 import bg3 from "../../Assets/3.svg";
 import "./Portfolio.scss";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Porfolio = ({ status, viewSys, setExiting }) => {
+  const [firstView, setFirstView] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFirstView(false);
+    }, 1300);
+  }, []);
+
   const transitions = {
     left: {
       initial: { opacity: 0, x: -100 },
@@ -33,7 +42,7 @@ const Porfolio = ({ status, viewSys, setExiting }) => {
           />
           <motion.div className="Porfolio__Items">
             {data.map((item, i) => (
-              <PorfolioItem item={item} i={i} status={status} />
+              <PorfolioItem item={item} i={i} firstView={firstView} />
             ))}
           </motion.div>
           <ArrowsNav

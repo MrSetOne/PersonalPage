@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-const PorfolioItem = ({ item, i, status }) => {
+const PorfolioItem = ({ item, i, firstView }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const allImgs = [visitVLC, cantastik, gameQuiz, survivor];
@@ -21,12 +21,17 @@ const PorfolioItem = ({ item, i, status }) => {
       y: screenWidth <= 666 ? 100 : 0,
       x: screenWidth <= 666 ? 0 : i % 2 === 0 ? 100 : -100,
     },
-    inView: { opacity: 1, y: 0, x: 0 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: firstView && { delay: 0.4, duration: 0.7 },
+    },
     exit: {
       opacity: 0,
       y: screenWidth <= 666 ? 100 : 0,
       x: screenWidth <= 666 ? 0 : i % 2 === 0 ? 100 : -100,
-      transition: { duration: 1 },
+      transition: { delay: 0.2, duration: 1 },
     },
   };
 
