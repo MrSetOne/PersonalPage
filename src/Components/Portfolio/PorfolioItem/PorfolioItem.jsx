@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import "./PorfolioItem.scss";
-import visitVLC from "../../../Assets/visit-vlc.jpg";
-import gameQuiz from "../../../Assets/Quiz.jpg";
-import cantastik from "../../../Assets/cantastik.jpg";
-import survivor from "../../../Assets/Survivor.jpg";
+import visitVLC from "../../../Assets/visit-vlc.webp";
+import gameQuiz from "../../../Assets/Quiz.webp";
+import cantastik from "../../../Assets/cantastik.webp";
+import survivor from "../../../Assets/Survivor.webp";
 import { motion } from "framer-motion";
 
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";

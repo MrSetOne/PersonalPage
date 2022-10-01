@@ -4,7 +4,7 @@ import "./Home.scss";
 import img1 from "../../Assets/1.svg";
 import img2 from "../../Assets/2.svg";
 import img3 from "../../Assets/3.svg";
-import astro from "../../Assets/astrokid.png";
+import astro from "../../Assets/astrokid.webp";
 import ArrowsNav from "../ArrowsNav/ArrowsNav";
 
 const Home = ({ status, viewSys, setExiting }) => {

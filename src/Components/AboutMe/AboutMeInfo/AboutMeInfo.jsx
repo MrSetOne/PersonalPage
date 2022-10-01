@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import me from "../../../Assets/me.png";
+import me from "../../../Assets/me.webp";
 import "./AboutMeInfo.scss";
 import Typewriter from "typewriter-effect";
 
