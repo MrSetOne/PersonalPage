@@ -7,7 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
-import bg from "../../Assets/4.svg";
+import bg1 from "../../Assets/1.svg";
+import bg2 from "../../Assets/2.svg";
 import ArrowNav from "../ArrowsNav/ArrowsNav";
 
 const serviceID = process.env.REACT_APP_SERVICE_ID;
@@ -40,8 +41,8 @@ const Contact = ({ status, viewSys, setExiting }) => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    setSubmited(true);
     // await sendForm(serviceID, templateID, e.target, publicKey);
+    setSubmited(true);
   };
 
   return (
@@ -255,21 +256,22 @@ const Contact = ({ status, viewSys, setExiting }) => {
               </li>
             </ul>
           </motion.div>
-          <motion.img
-            initial={{ y: -50, opacity: 0, rotate: "180deg" }}
-            animate={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.7 },
-            }}
-            exit={{
-              y: -50,
-              opacity: 0,
-              transition: { duration: 0.7 },
-            }}
-            src={bg}
-            alt="background"
-          />
+          <div className="Contact__Background">
+            <motion.img
+              initial={{ x: -100, opacity: 0, rotate: 180 }}
+              animate={{ x: 0, opacity: 1, transition: { duration: 0.9 } }}
+              exit={{ x: -100, opacity: 0, transition: { duration: 0.9 } }}
+              src={bg1}
+              alt="background"
+            />
+            <motion.img
+              initial={{ x: 100, opacity: 0, rotate: 300 }}
+              animate={{ x: 0, opacity: 1, transition: { duration: 0.9 } }}
+              exit={{ x: 100, opacity: 0, transition: { duration: 0.9 } }}
+              src={bg2}
+              alt="background"
+            />
+          </div>
         </section>
       )}
     </AnimatePresence>

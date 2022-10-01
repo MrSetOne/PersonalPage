@@ -13,6 +13,13 @@ import "./Technologies.scss";
 
 const Technologies = ({ status, viewSys, setExiting }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [firstView, setFirstView] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFirstView(false);
+    }, 1200);
+  }, []);
 
   function handleWindowSizeChange() {
     setScreenWidth(window.innerWidth);
@@ -35,7 +42,7 @@ const Technologies = ({ status, viewSys, setExiting }) => {
     animate: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 1, delay: 0.2 },
+      transition: firstView ? { duration: 1, delay: 0.2 } : { duration: 0.5 },
     },
     exitXL: {
       scale: 0,

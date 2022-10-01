@@ -7,12 +7,23 @@
     overflow: hidden;
     padding: calc(2.4rem + 4rem) min(2rem, 10vw);
     padding-bottom: 2rem;
-    >img {
+    .Contact__Background {
         position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        z-index: 0;
+        img {
+            position: absolute;
+            z-index: 0;
+        }
+         :nth-child(1) {
+            top: -54rem;
+            left: -40vw;
+            height: 87vw;
+        }
+         :nth-child(2) {
+            top: 0;
+            right: -52vw;
+            height: 81vw;
+        }
     }
     .Contact__Card {
         z-index: 1;
