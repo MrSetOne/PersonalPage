@@ -41,7 +41,7 @@ const Contact = ({ status, viewSys, setExiting }) => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    // await sendForm(serviceID, templateID, e.target, publicKey);
+    await sendForm(serviceID, templateID, e.target, publicKey);
     setSubmited(true);
   };
 
