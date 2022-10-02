@@ -1,45 +1,41 @@
 [{
     "name": "Visit-VLC",
-    "subtitle": "Aplicación de rutas turisticas",
+    "subtitle": "Aplicación de rutas turísticas",
     "type": "FullStack",
-    "description": "Reto de tripulaciones (Trabajo final) del BootCamp de FullStack en The Bridge, se trata de un proyecto FullStack, una herramienta de rutas urbanas del área metropolitana de Valencia.",
+    "description": "Una herramienta de rutas urbanas del área metropolitana de Valencia. El corazón de la aplicación es un mapa interactivo usando Leaflet. La aplicación sirve también de red social, dado que te permite comentar la ruta e incluso guardar en favoritos.",
     "technologies": ["React", "Redux", "NodeJS", "Express", "MongoDB", "Sass"],
     "links": {
         "page": "https://visit-vlc.vercel.app/",
         "github": "https://github.com/MrSetOne/VisitVLC-FrontEnd"
-    },
-    "img": ""
+    }
 }, {
     "name": "Cantastik",
-    "subtitle": "Red social hibrida",
+    "subtitle": "Red social híbrida",
     "type": "FullStack",
-    "description": "La idea desde el principio fue hacer una red social hibrida entre Instagram y Twitter, podrias subir fotos con o sin imagen como en Twitter pero con la estetica minimalista y user",
+    "description": "Red social hibrida entre Instagram y Twitter, hacer publicaciones con o sin imagen como en Twitter pero con la estética minimalista y user-friendly de Instagram. Todas las imágenes tienen que ser posteadas en formato 1x1 como era en el antiguo Instagram.",
     "technologies": ["React", "Redux", "NodeJS", "Express", "MongoDB", "Sass"],
     "links": {
         "page": "https://cantastik.vercel.app/",
         "github": "https://github.com/MrSetOne/cantastik-frontend"
-    },
-    "img": ""
+    }
 }, {
     "name": "Game-Quiz",
     "subtitle": "Minijuego tipo Quiz",
     "type": "FrontEnd",
-    "description": "consistia en genera un Quiz basandonos en JavaScript Vanilla, a excepcion de la libreria CharJs.Para esta pagina teniamos la idea de realizarla con formato SPA y sin scroll, de esta forma da la sensacion mas de juego y menos de pagina web.",
+    "description": "Minijuego tipo Quiz realizado con JavaScript Vanilla, a excepción de la librería CharJs. La aplicación es tipo SPA y sin scroll, para que de más sensación de juego y menos de página web.",
     "technologies": ["HTML", "CSS", "JavaScript", "CharJS"],
     "links": {
         "page": "https://mrsetone.github.io/Quiz/",
         "github": "https://github.com/MrSetOne/Quiz"
-    },
-    "img": ""
+    }
 }, {
     "name": "SurvivorShop",
     "type": "FullStack",
     "subtitle": "e-commerce postapocalíptico",
-    "description": "La idea fue realizar una tienda online en un apocalipsis zombie, donde puedes comprar todo lo necesario para sobrevivir o al menos intentarlo... Algunos productos están puestos de forma cómica, como por",
+    "description": "Tienda online en un apocalipsis zombie, puedes comprar todo lo necesario para sobrevivir o al menos intentarlo. Los productos están puestos de forma cómica y los precios son en Tenge kazajo",
     "technologies": ["React", "Redux", "NodeJS", "Express", "MySQL", "Sass"],
     "links": {
         "page": null,
         "github": "https://github.com/MrSetOne/SurvivorShop"
-    },
-    "img": ""
+    }
 }]
