@@ -36,6 +36,7 @@
         .PorfolioItem__Desc {
             font-size: min(1.5rem, 1.5vw);
             width: min(50rem, 90%);
+            text-align: justify;
         }
         .PorfolioItem__Links {
             display: flex;

@@ -128,8 +128,8 @@ const Technologies = ({ status, viewSys, setExiting }) => {
                 </h2>
                 <p>
                   Sin dudas, mi lado preferido y el que más disfruto, me es
-                  tremendamente sadisfactorio el manejo de estados junto a una
-                  estetica limpia.
+                  tremendamente satisfactorio el manejo de estados y generar un
+                  frontal agradable de usar.
                 </p>
               </header>
               <div className="Technologies__List">
@@ -167,7 +167,7 @@ const Technologies = ({ status, viewSys, setExiting }) => {
                 </h2>
                 <p>
                   Que no se vea, no significa que no exista, lo mejor de saber
-                  trabajar con él es que nunca se te escapa nada de tu frontal,
+                  trabajar con él es que nunca se te escapa nada de mi frontal,
                   puedo controlar todos los datos.
                 </p>
               </header>
@@ -200,12 +200,12 @@ const Technologies = ({ status, viewSys, setExiting }) => {
                 </div>
                 <h2>Otros</h2>
                 <p>
-                  Aquí tambien pongo las otras tecnologias con las que sé
+                  Aquí también pongo las otras tecnologías con las que sé
                   trabajar, no todo va a ser FrontEnd o BackEnd
                 </p>
               </header>
               <div className="Technologies__List">
-                <h3>Cloud:</h3>
+                <h3>Deploy:</h3>
                 <ul>
                   <li>Heroku</li>
                   <li>Vercel</li>
