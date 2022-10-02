@@ -79,10 +79,10 @@ const Contact = ({ status, viewSys, setExiting }) => {
             >
               <h2>¡Hablemos!</h2>
               <p>
-                Actualmente estoy en busqueda activa de mi primera oportunidad
+                Actualmente estoy en búsqueda activa de mi primera oportunidad
                 como desarrollador frontEnd o FullStack. Si buscas a alguien con
-                mi perfil no dudes en contactarme a través de este formulario.
-                !Estaré encantado de escuchar tu oferta!
+                mi perfil, no dudes en contactarme a través de este formulario.
+                ¡Estaré encantado de escuchar tu oferta!
               </p>
             </motion.header>
             <motion.form
@@ -144,7 +144,7 @@ const Contact = ({ status, viewSys, setExiting }) => {
                       transition: { delay: 0.6, duration: 0.7 },
                     }}
                   >
-                    <h3>¡Mensaje mandado con exito!</h3>
+                    <h3>¡Mensaje mandado con éxito!</h3>
                     <p>Te contestaré con la mayor brevedad posible :)</p>
                   </motion.div>
                 </motion.div>
@@ -195,7 +195,7 @@ const Contact = ({ status, viewSys, setExiting }) => {
                 }}
               >
                 <div />
-                <h3>Tambien puedes contarcarme en</h3>
+                <h3>También puedes contactarme en</h3>
                 <div />
               </motion.header>
             </div>
